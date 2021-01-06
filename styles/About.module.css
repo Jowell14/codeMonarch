@@ -1,0 +1,252 @@
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .AboutTitle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 30px;
+            /* max-width: 576px; */
+        }
+        
+        .AboutTitle h3 {
+            font-size: 30px;
+            font-family: "lato", sans-serif;
+            margin-bottom: 0;
+            color: whitesmoke;
+        }
+        
+        .AboutTitle p {
+            max-width: 576px;
+            text-align: center;
+            font-size: 15px;
+            font-family: sans-serif;
+            margin-top: 20px;
+            line-height: 24.66px;
+            padding-bottom: 40px;
+            color: whitesmoke;
+        }
+        
+        .row {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            z-index: 1;
+        }
+        
+        .row .card {
+            position: relative;
+            width: 270px;
+            height: 390px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            /* background: rgba(255, 255, 255, 0.02); */
+            background-color: coral;
+            overflow: hidden;
+            overflow: -moz-hidden-unscrollable;
+            display: flex;
+            text-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            border-left: 2px solid rgba(255, 255, 255, 0.2);
+            /* backdrop-filter: blur(10px); */
+            margin-right: 45px;
+            margin-bottom: 40px;
+            transform: skew(1deg, 1deg)
+        }
+        
+        .row .card::after {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.039);
+            pointer-events: none;
+            z-index: 2;
+        }
+        
+        .row .card::before {
+            content: ' ';
+            position: absolute;
+            top: -50%;
+            right: 0;
+            left: 0;
+            width: 210%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.039);
+            pointer-events: none;
+            z-index: 4;
+            transform: skew(4deg, -70deg);
+            animation: change 0.5s ease infinite;
+            -webkit-animation: change 3s infinite;
+            /* Safari 4+ */
+            -moz-animation: change 3s infinite;
+            /* Fx 5+ */
+            -o-animation: change 3s infinite;
+        }
+        
+        @keyframes change {
+            0% {
+                top: -200%;
+            }
+            50% {
+                top: -50%;
+            }
+            100% {
+                top: 100%;
+            }
+        }
+        
+        @-webkit-keyframes change {
+            0% {
+                top: -75%;
+            }
+            50% {
+                top: -25%;
+            }
+            100% {
+                top: 25%;
+            }
+        }
+        
+        @-moz-keyframes change {
+            0% {
+                top: -75%;
+            }
+            50% {
+                top: -25%;
+            }
+            100% {
+                top: 25%;
+            }
+        }
+        
+        @-o-keyframes change {
+            0% {
+                top: -75%;
+            }
+            50% {
+                top: -25%;
+            }
+            100% {
+                top: 25%;
+            }
+        }
+        
+        .row .card:nth-child(1) {
+            background-color: #c42348;
+            /* background-color: #1c83d6; */
+            /* background-color: #373682; */
+        }
+        
+        .row .card:nth-child(2) {
+            background-color: #3959a1;
+            /* background-color: darkorchid; */
+        }
+        
+        .row .card:nth-child(3) {
+            background-color: #1c83d6;
+            /* background-color: rgb(153, 12, 214); */
+            /* background-color: darkorchid; */
+        }
+        
+        .row .card:nth-child(4) {
+            background-color: teal;
+            /* background-color: chocolate; */
+        }
+        
+        .row .card:nth-child(5) {
+            background-color: chocolate;
+        }
+        /*
+        .row .card:nth-child(6) {
+            background-color: #3959a1;
+        }
+        
+        .row .card:nth-child(7) {
+            background-color: #1c83d6;
+        }
+        
+        .row .card:nth-child(8) {
+            background-color: #3959a1;
+        }
+        
+        */
+        
+        .row .card .content {
+            padding: 20px;
+            text-align: left;
+            transition: 0.5s;
+        }
+        
+        .row .card .content h2 {
+            position: absolute;
+            top: -15px;
+            right: 30px;
+            font-size: 8em;
+            font-family: "poppins", sans-serif;
+            color: rgba(255, 255, 255, 0.05);
+            pointer-events: none;
+            transition: 0.5s;
+        }
+        
+        .row .card .content h3 {
+            font-size: 23.2px;
+            color: white;
+            z-index: 1;
+            font-family: sans-serif;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .row .card .content p {
+            font-size: 13.2px;
+            color: rgb(201, 197, 197);
+            font-weight: 20;
+            line-height: 1.9;
+            text-align: left;
+            font-family: sans-serif;
+            margin-bottom: 10px;
+        }
+        
+        .row .card .content span {
+            display: inline-block;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.09);
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            border-left: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            padding: 5px 10px;
+            border-radius: 30px;
+            margin-top: 15px;
+            cursor: pointer;
+            text-align: center;
+            font-family: poppins;
+        }
+        
+        .row .card:hover .content h2 {
+            /* giving the h2 a translational hover effect */
+            top: -30px;
+            cursor: pointer;
+        }
+        
+        @media only screen and (max-width: 480px) {
+            .row .card {
+                margin-right: 0;
+            }
+        }
