@@ -4,7 +4,7 @@ import Navigation from "../components/Navigation";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Services from "../components/Services";
-import Sidebar from "../components/Sidebar";
+import SideBar from "../components/Sidebar";
 
 
 export default function Home() {
