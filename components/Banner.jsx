@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
-import styles from "../styles/banner.module.css";
 import Typing from "../components/Typing";
 
+import styles from "../styles/banner.module.css";
 
 const isServer = typeof window === "undefined";
 const WOW = !isServer ? require("wow.js") : null;
