@@ -5,11 +5,11 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import Services from "../components/Services";
 import Sidebar from "../components/Sidebar";
-import styles from "../styles/home.module.css";
+
 
 export default function Home() {
 	return (
-		<div className={styles.container}>
+		<div>
 			<Head>
 				<title> CodeMonarch </title> <link rel='icon' href='/favicon.ico ' />
 				// FACEBOOK OG TAGS
