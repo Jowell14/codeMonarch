@@ -5,7 +5,6 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import Services from "../components/Services";
 import Sidebar from "../components/Sidebar";
-import styles from "../styles/home.module.css";
 
 export default function Home() {
 	return (
