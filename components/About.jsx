@@ -1,5 +1,5 @@
 import React,{useEffect} from "react";
-import styles from "../styles/about.module.css";
+import styles from "../styles/About.module.css";
 import Image from "next/image";
 import Skeleton from "react-loading-skeleton";
 
