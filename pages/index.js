@@ -4,8 +4,7 @@ import Navigation from "../components/Navigation";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Services from "../components/Services";
-import SideBar from "../components/Sidebar";
-
+import SideBar from "../components/SideBar";
 
 export default function Home() {
 	return (
@@ -30,7 +29,7 @@ export default function Home() {
 				// FACEBOOK OG TAGS END
 			</Head>
 			<Banner />
-			<Sidebar />
+			<SideBar />
 			<Navigation />
 			<About />
 			<Services />
