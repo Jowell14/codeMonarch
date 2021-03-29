@@ -1,15 +1,21 @@
+html {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+    max-width: 1200px; */
+    scroll-behavior: smooth;
+}
+
 html,
 body {
+    position: relative;
+    background-color: #1a202c;
+    color: whitesmoke;
+    font-family: 'Barlow', sans-serif;
     padding: 0;
     margin: 0;
-    /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-    /* font-family: 'Lobster Two', cursive !important; */
-    overflow-x: hidden;
-    background-color: #fff;
     box-sizing: border-box;
-    background-color: #1a202c;
-    font-family: "lato", sans-serif;
-    position: relative;
 }
 
 a {
@@ -19,4 +25,8 @@ a {
 
 * {
     box-sizing: border-box;
+}
+
+.fab {
+    color: whitesmoke;
 }

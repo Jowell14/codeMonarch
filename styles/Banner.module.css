@@ -1,184 +1,165 @@
-@import "https://fonts.googleapis.com/css?family=lato:100";
-.container {
-    height: 90vh;
-    width: 100vw;
-    /* font-family: "lato", sans-serif; */
-    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
-    background: linear-gradient(-45deg, #373682, #3959a1, #c42348, #d91e36);
-    background-size: 400% 400%;
-    animation: change 10s ease-in-out infinite;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
-    position: relative;
-}
-
-.content {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.h1 {
-    color: #fff;
-    font-weight: bolder;
-    font-size: 80px;
-    font-family: "lato", sans-serif;
-    margin-top: -10px;
-    margin-bottom: 9px;
-}
-
-.img {
-    width: 150px;
-}
-
-.Typewriter {
-    color: #fff;
-    margin-top: 7px;
-    font-size: 15px;
-    text-align: center !important;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 20px;
-}
-
-.downArrow {
-    display: none;
-    pointer-events: none;
-}
-
-@keyframes change {
-    0% {
-        background-position: 0 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0 50%;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .Typewriter {
-        color: #fff;
-        margin-top: 0;
-        font-size: 12px;
-        width: 60%;
-        word-wrap: break-word;
-        position: absolute;
-        top: 53%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .h1 {
-        color: #fff;
-        font-weight: bolder;
-        font-size: 50px;
-        font-family: "lato", sans-serif;
-        margin-top: -2px;
-        margin-bottom: -9px;
-    }
-    .img {
-        position: relative;
-        width: 130px;
-    }
-    .container {
-        height: 105vh;
-        margin-bottom: 50px;
-    }
-    .content {
-        position: absolute;
-        top: 37%;
-        left: 40%;
-        transform: translate(-40%, -40%);
-        width: 100vw;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .downArrow {
-        -moz-animation: bounce 3s infinite;
-        -webkit-animation: bounce 3s infinite;
-        animation: bounce 3s infinite;
-        position: absolute;
-        top: 77%;
-        left: 50%;
-        color: #fff;
-        transform: translate(-50% -77%);
-        /* fill: white; */
-        display: block;
-    }
-    @-moz-keyframes bounce {
-        0%,
-        20%,
-        50%,
-        80%,
-        100% {
-            -moz-transform: translateY(0);
-            transform: translateY(0);
-        }
-        40% {
-            -moz-transform: translateY(-20px);
-            transform: translateY(-20px);
-        }
-        60% {
-            -moz-transform: translateY(-10px);
-            transform: translateY(-10px);
-        }
-    }
-    @-webkit-keyframes bounce {
-        0%,
-        20%,
-        50%,
-        80%,
-        100% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-        }
-        40% {
-            -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-        }
-        60% {
-            -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-        }
-    }
-    @keyframes bounce {
-        0%,
-        20%,
-        50%,
-        80%,
-        100% {
-            -moz-transform: translateY(0);
-            -ms-transform: translateY(0);
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-        }
-        40% {
-            -moz-transform: translateY(-20px);
-            -ms-transform: translateY(-20px);
-            -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-        }
-        60% {
-            -moz-transform: translateY(-10px);
-            -ms-transform: translateY(-10px);
-            -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-        }
-    }
-}
+                    /* @import "https://fonts.googleapis.com/css?family=lato:100"; */
+                    
+                    .container {
+                        height: 90vh;
+                        max-width: 100%;
+                        background: linear-gradient(-60deg, #2d457e, #233661, #7c2341, #7c2341);
+                        background-size: 400% 400%;
+                        animation: change 10s ease-in-out infinite;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        color: #fff;
+                    }
+                    
+                    .content {
+                        width: 100%;
+                        display: flex;
+                        text-align: center;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    
+                    .h1 {
+                        color: #fff;
+                        font-weight: bolder;
+                        font-size: 80px;
+                        font-family: "lato", sans-serif !important;
+                        margin-top: -10px;
+                        margin-bottom: 9px;
+                    }
+                    
+                    .img {
+                        object-fit: cover;
+                        width: 270px;
+                        margin-bottom: 20px;
+                    }
+                    
+                    .Typewriter {
+                        color: #fff;
+                        font-family: "lato", sans-serif !important;
+                        font-size: 16px;
+                        font-weight: 400;
+                        padding-top: 7px;
+                        text-align: center !important;
+                    }
+                    
+                    .downArrow {
+                        display: none;
+                        pointer-events: none;
+                    }
+                    
+                    @keyframes change {
+                        0% {
+                            background-position: 0 50%;
+                        }
+                        50% {
+                            background-position: 100% 50%;
+                        }
+                        100% {
+                            background-position: 0 50%;
+                        }
+                    }
+                    
+                    @media only screen and (max-width: 480px) {
+                        .container {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                            color: #fff;
+                            background: linear-gradient(-60deg, #2d457e, #2d457e, #7c2341, #7c2341);
+                            background-size: 400% 400%;
+                            height: 100vh;
+                            width: 100vw;
+                            margin-bottom: 20px;
+                            animation: change 10s ease-in-out infinite;
+                        }
+                        .Typewriter {
+                            font-family: "barlow", sans-serif !important;
+                            font-size: 14px;
+                            font-weight: 400;
+                            min-height: 60px;
+                            margin-top: 0;
+                        }
+                        .h1 {
+                            color: #fff;
+                            font-weight: bolder;
+                            font-size: 50px;
+                            font-family: "lato", sans-serif !important;
+                            margin-top: -2px;
+                            margin-bottom: -9px;
+                        }
+                        .img {
+                            width: 190px;
+                            margin-bottom: 15px;
+                        }
+                        .content {
+                            max-width: 70%;
+                            display: flex;
+                            text-align: center;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 20px;
+                        }
+                        .downArrow {
+                            display: block;
+                            color: #fff;
+                            padding-top: 160px;
+                            animation: bounce 3s infinite;
+                            -moz-animation: bounce 3s infinite;
+                            -webkit-animation: bounce 3s infinite;
+                        }
+                        @-webkit-keyframes bounce {
+                            0%,
+                            20%,
+                            50%,
+                            80%,
+                            100% {
+                                -moz-transform: translateY(0);
+                                -ms-transform: translateY(0);
+                                -webkit-transform: translateY(0);
+                                transform: translateY(0);
+                            }
+                            40% {
+                                -moz-transform: translateY(-20px);
+                                -ms-transform: translateY(-20px);
+                                -webkit-transform: translateY(-20px);
+                                transform: translateY(-20px);
+                            }
+                            60% {
+                                -moz-transform: translateY(-10px);
+                                -ms-transform: translateY(-10px);
+                                -webkit-transform: translateY(-10px);
+                                transform: translateY(-10px);
+                            }
+                        }
+                        @keyframes bounce {
+                            0%,
+                            20%,
+                            50%,
+                            80%,
+                            100% {
+                                -moz-transform: translateY(0);
+                                -ms-transform: translateY(0);
+                                -webkit-transform: translateY(0);
+                                transform: translateY(0);
+                            }
+                            40% {
+                                -moz-transform: translateY(-20px);
+                                -ms-transform: translateY(-20px);
+                                -webkit-transform: translateY(-20px);
+                                transform: translateY(-20px);
+                            }
+                            60% {
+                                -moz-transform: translateY(-10px);
+                                -ms-transform: translateY(-10px);
+                                -webkit-transform: translateY(-10px);
+                                transform: translateY(-10px);
+                            }
+                        }
+                    }

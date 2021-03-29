@@ -1,69 +1,66 @@
-import { motion } from "framer-motion";
-import React, {useState} from "react";
-import styles from "../styles/Sidebar.module.css";
-import "react-sidebar-ui/dist/index.css";
 import Link from "next/link";
-
-
-
-const variants = {
-	open: { opacity: 1, y: 0 },
-	closed: { opacity: 0, y: "-10px" },
-};
-const menuVariants = {
-	open: { opacity: 1, x: 0 },
-	closed: { opacity: 0 },
-};
-
+import React, { useState } from "react";
+import styles from "../styles/sidebar.module.css";
 
 const SideBar = () => {
 	const [sidebar, setSidebar] = useState(false);
+	const [hideMenuIcon, setHideMenuIcon] = useState(false);
 
 	const showSidebar = () => setSidebar(!sidebar);
+	const showMenuIcon=()=> setHideMenuIcon(!hideMenuIcon)
+
+	const toggleSidebar = () => {
+		showSidebar();
+		if (showSidebar) {
+			showMenuIcon();
+		}
+	};
+	const removeSidebar = () => {
+			showSidebar()
+			return showMenuIcon();
+	};
 
 	return (
 		<div className={styles.sidebar}>
-			<div className={styles.menuIcon}>
-				<i className='fas fa-bars fa-lg' onClick={showSidebar}></i>
+			<div className={hideMenuIcon ? styles.hideIcon : styles.menuIcon}>
+				<i className='fas fa-bars fa-lg' onClick={toggleSidebar}></i>
 			</div>
 			{/* NAV SIDEBAR */}
 			<nav className={sidebar ? styles.navMenuActive : styles.navMenu}>
 				<ul className={styles.navList}>
 					<li className={styles.navItem}>
-						<Link href='/'>
-							<a>Home</a>
+						<Link href='/#home'>
+							<a onClick={removeSidebar}>Home</a>
 						</Link>
 					</li>
 					<li className={styles.navItem}>
-						<Link href='/'>
-							<a>About</a>
+						<Link href='/#about'>
+							<a onClick={removeSidebar}>About</a>
 						</Link>
 					</li>
 					<li className={styles.navItem}>
-						<Link href='/'>
-							<a>Contact</a>
+						<Link href='/#services'>
+							<a onClick={removeSidebar}>Services</a>
 						</Link>
 					</li>
 					<li className={styles.navItem}>
-						<Link href='/'>
-							<a>Clients</a>
+						<Link href='/#contact'>
+							<a onClick={removeSidebar}>Contact</a>
 						</Link>
 					</li>
 					<li className={styles.navItem}>
-						<Link href='/'>
-							<a>Projects</a>
+						<Link href='/blog'>
+							<a onClick={removeSidebar}>Blog</a>
 						</Link>
 					</li>
 				</ul>
 				{/* EXIT ICON */}
 				<span className={styles.backIcon}>
-					<i className='fas fa-times-circle fa-lg' onClick={showSidebar}></i>
+					<i className='fas fa-times-circle fa-lg' onClick={removeSidebar}></i>
 				</span>
 			</nav>
 		</div>
 	);
+};
 
-}
-
-
-export default SideBar
+export default SideBar;

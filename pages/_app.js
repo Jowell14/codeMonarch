@@ -1,6 +1,5 @@
 import '../styles/globals.css'
 import "@fortawesome/fontawesome-free/css/all.css";
-import "../styles/tailwind.css";
 import Router from "next/router";
 import NProgress from "nprogress"; //nprogress module
 import "nprogress/nprogress.css"; //styles of nprogress

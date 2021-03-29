@@ -1,38 +1,42 @@
-import React from "react";
-import styles from "../styles/Banner.module.css";
+import React, { useEffect } from "react";
+import Link from "next/link";
+import styles from "../styles/banner.module.css";
 import Typing from "../components/Typing";
-// import Image from "next/image";
-import SideBar from "../components/SideBar";
+
+
+const isServer = typeof window === "undefined";
+const WOW = !isServer ? require("wow.js") : null;
 
 function Banner() {
+	useEffect(() => {
+		new WOW().init();
+	}, []);
+
 	return (
 		<div>
-			<div className={styles.container}>
+			<div id='home' className={styles.container}>
 				<div className={styles.content}>
 					<div className={styles.img}>
-						{/* <Image
-							src='/Dualsight_png.png'
-							title='Dual Sight+'
-							alt='Logo'
-							width={170}
-							height={170}
-							quality={100}
-						/> */}
 						<img
-							className={styles.img}
-							src='/Dualsight_png.png'
-							alt='Dual sight logo'
+							className={`${styles.img} ${"wow tada"}`}
+							src='/CodeMonarch.png'
+							alt='Code Monarch logo'
 						/>
 					</div>
-					<h1 className={styles.h1}>CodeMonarch</h1>
+					<div
+						data-wow-delay='670ms'
+						className={`${styles.Typewriter} ${"wow zoomInRight"}`}>
+						<Typing />
+					</div>
 				</div>
-				<Typing />
-				<div className={styles.downArrow}>
-					<i className='fas fa-arrow-down'></i>
+				<div data-wow-delay='1000ms' className={"wow fadeInUpBig"}>
+					<Link href='/#about'>
+						<a className={styles.downArrow}>
+							<i className='fas fa-arrow-down' aria-hidden='true'></i>
+						</a>
+					</Link>
 				</div>
-				<SideBar />
 			</div>
-			{/* <Sidebar/> */}
 		</div>
 	);
 }
