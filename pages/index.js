@@ -6,6 +6,7 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import Services from "../components/Services";
 import DropDown from "../components/DropDown";
+import Footer from "../components/Footer";
 
 export default function Home() {
 	const [dropMenuVisibility, setdropMenuVisibility] = useState(true);
@@ -60,6 +61,7 @@ export default function Home() {
 			<About />
 			<Services />
 			<Contact />
+			<Footer />
 		</div>
 	);
 }
