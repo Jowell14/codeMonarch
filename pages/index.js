@@ -1,14 +1,36 @@
 import Head from "next/head";
+import React, { useState } from "react";
 import Banner from "../components/Banner";
 import Navigation from "../components/Navigation";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Services from "../components/Services";
-import SideBar from "../components/SideBar";
+import DropDown from "../components/DropDown";
 
 export default function Home() {
+	const [dropMenuVisibility, setdropMenuVisibility] = useState(true);
+	const [hideMenuIcon, setHideMenuIcon] = useState(true);
+
+	const hideDropdownMenu = () => setdropMenuVisibility(!dropMenuVisibility);
+	const showMenuIcon = () => setHideMenuIcon(!hideMenuIcon);
+
+	// Toggle dropdown when hamburger menu is clicked
+	const toggleDropdown = () => {
+		hideDropdownMenu();
+		if (hideDropdownMenu) {
+			showMenuIcon();
+		}
+	};
+	// clear sidebar when screen is touched when dropdown is visible
+	const clearScreen = () => {
+		if (hideMenuIcon) {
+			toggleDropdown();
+		} else if (!hideMenuIcon) {
+			return
+		}
+	};
 	return (
-		<div>
+		<div onClick={clearScreen}>
 			<Head>
 				<title> CodeMonarch </title> <link rel='icon' href='/favicon.ico ' />
 				// FACEBOOK OG TAGS
@@ -29,7 +51,11 @@ export default function Home() {
 				// FACEBOOK OG TAGS END
 			</Head>
 			<Banner />
-			<SideBar />
+			<DropDown
+				toggleDropdown={toggleDropdown}
+				dropMenuVisibility={dropMenuVisibility}
+				hideMenuIcon={hideMenuIcon}
+			/>
 			<Navigation />
 			<About />
 			<Services />

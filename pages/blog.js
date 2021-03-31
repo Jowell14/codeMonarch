@@ -3,24 +3,24 @@
 // import styles from "../styles/Blog.module.css";
 // import Skeleton from "react-loading-skeleton";
 
- // TODO:
- // FIX HEROKU BLOG APPLICATION ERROR
- // CREATE LOADING SKELETON
- //  MAKE BLOG POST CARDS
+// TODO:
+// FIX HEROKU BLOG APPLICATION ERROR
+// CREATE LOADING SKELETON
+//  MAKE BLOG POST CARDS
 //  DISPLAY READ TIME
- //  DISPLAY DATE
+//  DISPLAY DATE
 
 // const { BLOG_URL, CONTENT_API_KEY } = process.env;
 
 // async function getPosts() {
-	// curl ""
+// curl ""
 // 	const res = await fetch(
 // 		`${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt,featured_image`
 // 	).then((res) => res.json());
 
 // 	const posts = res.posts;
 
-	// console.log(posts)
+// console.log(posts)
 
 // 	return posts;
 // }
@@ -67,11 +67,14 @@
 // export default blog;
 
 import React from "react";
+import styles from "../styles/Blog.module.css";
 
 const blog = () => {
-	return <div>
-		<h1>Blog coming soon</h1>
-	</div>;
+	return (
+		<div className={styles.container}>
+			<h1 className={styles.h1}> Blog coming soon... </h1>
+		</div>
+	);
 };
 
 export default blog;
