@@ -20,6 +20,7 @@ class MyDocument extends Document {
 						href='https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&display=swap'
 						rel='stylesheet'
 					/>
+					<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet"/>
 					{/* Import Barlow weight 500 */}
 					<link
 						href='https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap'

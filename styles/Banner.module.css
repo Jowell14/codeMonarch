@@ -3,7 +3,10 @@
 .container {
     height: 90vh;
     max-width: 100%;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(-60deg, #2d457e, #233661, #7c2341, #7c2341);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(-60deg, #2d457e, #233661, #7c2341, #7c2341);
     background-size: 400% 400%;
     animation: change 10s ease-in-out infinite;
     display: flex;
@@ -22,24 +25,25 @@
     justify-content: center;
 }
 
-.h1 {
-    color: #fff;
-    font-weight: bolder;
-    font-size: 80px;
-    font-family: "lato", sans-serif !important;
-    margin-top: -10px;
-    margin-bottom: 9px;
-}
-
 .img {
     object-fit: cover;
-    width: 270px;
+    width: 210px;
     margin-bottom: 20px;
+}
+
+.h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Lato", sans-serif !important;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 
 .Typewriter {
     color: #fff;
-    font-family: "lato", sans-serif !important;
+    font-family: 'Lato', sans-serif !important;
     font-size: 16px;
     font-weight: 400;
     padding-top: 7px;
@@ -79,22 +83,22 @@
         animation: change 10s ease-in-out infinite;
     }
     .Typewriter {
-        font-family: "barlow", sans-serif !important;
+        font-family: 'Lato', sans-serif !important;
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 300;
         min-height: 60px;
         margin-top: 0;
     }
     .h1 {
         color: #fff;
         font-weight: bolder;
-        font-size: 50px;
+        font-size: 30px;
         font-family: "lato", sans-serif !important;
         margin-top: -2px;
         margin-bottom: -9px;
     }
     .img {
-        width: 190px;
+        width: 120px;
         margin-bottom: 15px;
     }
     .content {
@@ -108,7 +112,8 @@
     }
     .downArrow {
         display: block;
-        color: #fff;
+        /* color: #fff; */
+        width: 25px;
         padding-top: 160px;
         animation: bounce 3s infinite;
         -moz-animation: bounce 3s infinite;

@@ -122,7 +122,7 @@ useEffect(() => {
 							</div>
 						</div>
 						<button className={styles.formSubmit} type='submit'>
-							Submit request
+							Send message
 						</button>
 					</form>
 				</div>

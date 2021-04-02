@@ -40,7 +40,7 @@ const dropDown = ({ toggleDropdown, dropMenuVisibility, hideMenuIcon }) => {
 				</ul>
 				{/* EXIT ICON */}
 				<span className={styles.backIcon}>
-					<i className='fas fa-times-circle fa-lg' onClick={toggleDropdown}></i>
+					&times;
 				</span>
 			</nav>
 		</div>

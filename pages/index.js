@@ -9,12 +9,18 @@ import DropDown from "../components/DropDown";
 import Footer from "../components/Footer";
 
 export default function Home() {
-	const [dropMenuVisibility, setdropMenuVisibility] = useState(true);
-	const [hideMenuIcon, setHideMenuIcon] = useState(true);
+	// State for Dropdown menu
+	const [dropMenuVisibility, setdropMenuVisibility] = useState(false);
 
+	// State for hiding stuff
+	const [hideMenuIcon, setHideMenuIcon] = useState(false);
+
+	//  Dropdown states stored in a variable
 	const hideDropdownMenu = () => setdropMenuVisibility(!dropMenuVisibility);
+
 	const showMenuIcon = () => setHideMenuIcon(!hideMenuIcon);
 
+	// Functions to handle dropdown
 	// Toggle dropdown when hamburger menu is clicked
 	const toggleDropdown = () => {
 		hideDropdownMenu();
@@ -24,11 +30,24 @@ export default function Home() {
 	};
 	// clear sidebar when screen is touched when dropdown is visible
 	const clearScreen = () => {
+		if (openModal) {
+			toggleModal();
+		}
 		if (hideMenuIcon) {
 			toggleDropdown();
 		} else if (!hideMenuIcon) {
-			return
+			return;
 		}
+	};
+
+	// State for Modal
+	const [openModal, setOpenModal] = useState(false);
+	const [hideConsultBtn, setHideConsultBtn] = useState(false);
+
+	// Function to handle Modal control
+	const toggleModal = () => {
+		setOpenModal(!openModal);
+		setHideConsultBtn(!hideConsultBtn);
 	};
 	return (
 		<div onClick={clearScreen}>
@@ -58,7 +77,11 @@ export default function Home() {
 				hideMenuIcon={hideMenuIcon}
 			/>
 			<Navigation />
-			<About />
+			<About
+				openModal={openModal}
+				toggleModal={toggleModal}
+				hideConsultBtn={hideConsultBtn}
+			/>
 			<Services />
 			<Contact />
 			<Footer />

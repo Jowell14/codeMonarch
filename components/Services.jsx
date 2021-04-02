@@ -26,10 +26,8 @@ const Services = () => {
 						</div> */}
 							<h3>Web Development</h3>
 							<p>
-								We craft intuitive graphical user interfaces and user
-								experience, scalable and reliable backends and services as well
-								as offer data sources by the standards of ever-evolving web
-								technologies.
+								We create appealing graphical user interfaces and user
+								experience, scalable and reliable backends services with modern technologies. 
 							</p>
 						</div>
 						<Link href='/#contact'>

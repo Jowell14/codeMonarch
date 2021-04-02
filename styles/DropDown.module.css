@@ -44,6 +44,10 @@
     padding-right: 100%;
 }
 
+.backIcon {
+    font-size: 50px;
+}
+
 @media only screen and (max-width: 480px) {
     .menuIcon {
         position: sticky;

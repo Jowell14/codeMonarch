@@ -23,6 +23,7 @@ function Banner() {
 							alt='Code Monarch logo'
 						/>
 					</div>
+					{/* <h1 className={styles.h1}>It's how products are built...</h1> */}
 					<div
 						data-wow-delay='670ms'
 						className={`${styles.Typewriter} ${"wow zoomInRight"}`}>
@@ -31,8 +32,12 @@ function Banner() {
 				</div>
 				<div data-wow-delay='1000ms' className={"wow fadeInUpBig"}>
 					<Link href='/#about'>
-						<a className={styles.downArrow}>
-							<i className='fas fa-arrow-down' aria-hidden='true'></i>
+						<a>
+							<img
+								className={styles.downArrow}
+								src='/arrowdown.png'
+								alt='scroll down'
+							/>
 						</a>
 					</Link>
 				</div>
