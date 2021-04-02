@@ -42,7 +42,7 @@ const About = ({openModal, toggleModal, hideConsultBtn}) => {
 					{/*  Call */}
 					<div className={`${styles.phoneNumber} ${styles.buttons}`}>
 						<img className={styles.icon} src='/phone.png' alt='call us' />
-						<a href='tel:123-456-7890'>Call</a>
+						<a href='tel:+2349036075477'>Call</a>
 					</div>
 
 					<div

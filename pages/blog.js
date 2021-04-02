@@ -67,12 +67,12 @@
 // export default blog;
 
 import React from "react";
-import styles from "../styles/Blog.module.css";
+// import styles from "../styles/Blog.module.css";
 
 const blog = () => {
 	return (
 		<div className={styles.container}>
-			<h1 className={styles.h1}> Blog coming soon... </h1>
+			<h1 className={styles.h1}> Blog coming soon... </h1>{" "}
 		</div>
 	);
 };
